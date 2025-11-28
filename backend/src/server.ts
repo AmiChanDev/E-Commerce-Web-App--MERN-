@@ -31,6 +31,7 @@ app.get("/api/health", (_req: Request, res: Response) => {
     message: "E-Commerce API is running",
     timestamp: new Date().toISOString(),
   });
+  console.log("Health Check API Called");
 });
 
 // Routes will be added here
