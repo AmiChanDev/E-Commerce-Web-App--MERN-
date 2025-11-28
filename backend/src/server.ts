@@ -27,6 +27,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// Request logger
+app.use((req: Request, _res: Response, next: any) => {
+  console.log(`${req.method} ${req.path}`);
+  next();
+});
+
 // Health check route
 app.get("/api/health", (_req: Request, res: Response) => {
   res.status(200).json({
