@@ -47,7 +47,7 @@ export const protect = async (
 
       if (!user) {
         res.status(401).json({
-          status: "400",
+          status: "error",
           message: "User not found!",
         });
         return;
@@ -75,7 +75,7 @@ export const protect = async (
 // Optional auth - continues even if no token
 export const optionalAuth = async (
   req: AuthRequest,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ): Promise<void> => {
   try {
