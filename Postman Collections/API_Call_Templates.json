@@ -73,6 +73,23 @@
 				"url": "http://localhost:5000/api/auth/me"
 			},
 			"response": []
+		},
+		{
+			"name": "logout",
+			"id": "a478f248-69a4-48be-abe4-498f6a969e71",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:5000/api/auth/logout"
+			},
+			"response": []
 		}
 	]
 }
