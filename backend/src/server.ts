@@ -4,6 +4,9 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/db";
 
+//route imports
+import authRoutes from "./routes/authRoutes";
+
 // Load environment variables
 dotenv.config();
 
@@ -34,11 +37,11 @@ app.get("/api/health", (_req: Request, res: Response) => {
   console.log("Health Check API Called");
 });
 
-// Routes will be added here
-// app.use('/api/auth', authRoutes);
-// app.use('/api/products', productRoutes);
-// app.use('/api/cart', cartRoutes);
-// app.use('/api/orders', orderRoutes);
+// routes
+app.use("/api/auth", authRoutes);
+// app.use("/api/products", productRoutes);
+// app.use("/api/cart", cartRoutes);
+// app.use("/api/orders", orderRoutes);
 
 // 404 Handler
 app.use((_req: Request, res: Response) => {
