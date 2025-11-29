@@ -84,6 +84,234 @@
 				}
 			],
 			"id": "fcd730d3-e30e-43d1-8a31-dd94bb5483aa"
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get products (limit 10)",
+					"id": "df2c1b6c-6a8c-4f25-9c73-6a7ac55d167e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?page=1&limit=10",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search products",
+					"id": "9bcaa7a9-271a-4476-9a16-77a529ff0959",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?search=jacket",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "jacket"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter by category",
+					"id": "112b952a-482c-4618-a55e-35903b7c9372",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?category=Men",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Men"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter by size",
+					"id": "e5bcceae-186d-4e6c-84f7-6f87489ff5b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?size=L",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "L"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter by price range",
+					"id": "e375b7a1-347b-4b11-8b8d-4fff56d3f779",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?priceMin=50&priceMax=100",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "priceMin",
+									"value": "50"
+								},
+								{
+									"key": "priceMax",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "multiple filters",
+					"id": "40f70b09-0c67-478f-834d-976575aa2830",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?category=Women&size=M&priceMin=40&priceMax=80&page=1&limit=5",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Women"
+								},
+								{
+									"key": "size",
+									"value": "M"
+								},
+								{
+									"key": "priceMin",
+									"value": "40"
+								},
+								{
+									"key": "priceMax",
+									"value": "80"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New request",
+					"id": "442f3936-a5ee-496f-ab12-4396225c9ad5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "New request",
+					"id": "e229952b-2fe6-4d93-8b9e-c3a9de0cc75e",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				}
+			],
+			"id": "3384d98e-42d1-4067-b88a-7dac2d296ca9"
 		}
 	]
 }
