@@ -19,7 +19,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"raw": "{\r\n  \"name\": \"Jsohn Doe\",\r\n  \"email\": \"jsohn@example.com\",\r\n  \"password\": \"passsword123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -37,10 +37,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "inherit",
-							"inherit": {}
-						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -52,7 +48,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:5000/api/auth/login"
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/auth/login"
 					},
 					"response": []
 				},
@@ -63,13 +59,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "inherit",
-							"inherit": {}
-						},
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:5000/api/auth/me"
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/auth/me"
 					},
 					"response": []
 				},
@@ -86,7 +78,7 @@
 						},
 						"method": "POST",
 						"header": [],
-						"url": "http://localhost:5000/api/auth/logout"
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/auth/logout"
 					},
 					"response": []
 				}
