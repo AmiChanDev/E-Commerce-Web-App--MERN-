@@ -15,10 +15,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "inherit",
-							"inherit": {}
-						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -30,7 +26,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:5000/api/auth/register"
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/auth/register"
 					},
 					"response": []
 				},
