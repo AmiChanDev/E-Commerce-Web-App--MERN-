@@ -182,30 +182,111 @@
 				{
 					"name": "filter by size",
 					"id": "e5bcceae-186d-4e6c-84f7-6f87489ff5b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?size=L",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "L"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "New request",
+					"name": "filter by price range",
 					"id": "e375b7a1-347b-4b11-8b8d-4fff56d3f779",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?priceMin=50&priceMax=100",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "priceMin",
+									"value": "50"
+								},
+								{
+									"key": "priceMax",
+									"value": "100"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "New request",
+					"name": "multiple filters",
 					"id": "40f70b09-0c67-478f-834d-976575aa2830",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": {
+							"raw": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products?category=Women&size=M&priceMin=40&priceMax=80&page=1&limit=5",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"port": "{{SERVER_PORT}}",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Women"
+								},
+								{
+									"key": "size",
+									"value": "M"
+								},
+								{
+									"key": "priceMin",
+									"value": "40"
+								},
+								{
+									"key": "priceMax",
+									"value": "80"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
 					},
 					"response": []
 				},
