@@ -154,3 +154,29 @@ export const createProduct = async (
     });
   }
 };
+
+// @desc    Get product categories
+// @route   GET /api/products/categories
+// @access  Public
+export const getCategories = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  try {
+    const categories = await Product.distinct("category");
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        categories,
+      },
+    });
+  } catch (error: any) {
+    console.error("Get categories error:", error);
+    res.status(500).json({
+      status: "error",
+      message: "Error fetching categories",
+      error: error.message,
+    });
+  }
+};
