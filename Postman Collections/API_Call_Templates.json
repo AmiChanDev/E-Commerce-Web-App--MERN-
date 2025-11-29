@@ -6,90 +6,96 @@
 	},
 	"item": [
 		{
-			"name": "register",
-			"id": "97e1053a-173e-4052-8443-5aafaf2ba766",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "inherit",
-					"inherit": {}
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"id": "97e1053a-173e-4052-8443-5aafaf2ba766",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/auth/register"
+					},
+					"response": []
 				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"password123\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+				{
+					"name": "login",
+					"id": "d3e1dfaa-366a-461b-b317-c23c5971813e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/auth/login"
+					},
+					"response": []
 				},
-				"url": "http://localhost:5000/api/auth/register"
-			},
-			"response": []
-		},
-		{
-			"name": "login",
-			"id": "d3e1dfaa-366a-461b-b317-c23c5971813e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "inherit",
-					"inherit": {}
+				{
+					"name": "get current user",
+					"id": "c782dbb7-bcbb-4fba-a6f7-3c97bbb4e9fd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/auth/me"
+					},
+					"response": []
 				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"password123\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "http://localhost:5000/api/auth/login"
-			},
-			"response": []
-		},
-		{
-			"name": "get current user",
-			"id": "c782dbb7-bcbb-4fba-a6f7-3c97bbb4e9fd",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "inherit",
-					"inherit": {}
-				},
-				"method": "GET",
-				"header": [],
-				"url": "http://localhost:5000/api/auth/me"
-			},
-			"response": []
-		},
-		{
-			"name": "logout",
-			"id": "a478f248-69a4-48be-abe4-498f6a969e71",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": {}
-				},
-				"method": "POST",
-				"header": [],
-				"url": "http://localhost:5000/api/auth/logout"
-			},
-			"response": []
+				{
+					"name": "logout",
+					"id": "a478f248-69a4-48be-abe4-498f6a969e71",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:5000/api/auth/logout"
+					},
+					"response": []
+				}
+			],
+			"id": "fcd730d3-e30e-43d1-8a31-dd94bb5483aa"
 		}
 	]
 }
