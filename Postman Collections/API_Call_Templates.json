@@ -291,7 +291,7 @@
 					"response": []
 				},
 				{
-					"name": "New request",
+					"name": "get product by ID",
 					"id": "442f3936-a5ee-496f-ab12-4396225c9ad5",
 					"request": {
 						"method": "GET",
@@ -301,12 +301,15 @@
 					"response": []
 				},
 				{
-					"name": "New request",
+					"name": "get categories",
 					"id": "e229952b-2fe6-4d93-8b9e-c3a9de0cc75e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/products/categories"
 					},
 					"response": []
 				}
