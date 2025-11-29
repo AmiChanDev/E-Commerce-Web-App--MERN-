@@ -84,6 +84,22 @@
 				}
 			],
 			"id": "fcd730d3-e30e-43d1-8a31-dd94bb5483aa"
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "New request",
+					"id": "df2c1b6c-6a8c-4f25-9c73-6a7ac55d167e",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				}
+			],
+			"id": "3384d98e-42d1-4067-b88a-7dac2d296ca9"
 		}
 	]
 }
