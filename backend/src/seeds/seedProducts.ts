@@ -7,10 +7,14 @@ dotenv.config();
 
 const seedDB = async (): Promise<void> => {
   try {
-    const mongoURI =
-      process.env.MONGO_URI || "mongodb://localhost:27017/ecommerce";
+    const mongoURI = process.env.MONGO_URI;
+
+    if (!mongoURI) {
+      throw new Error("MONGO_URI is not defined in environment variables");
+    }
 
     await mongoose.connect(mongoURI);
+
     console.log("✅ MongoDB connected");
 
     // Clear existing products

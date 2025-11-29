@@ -6,6 +6,7 @@ import connectDB from "./config/db";
 
 //route imports
 import authRoutes from "./routes/authRoutes";
+import productRoutes from './routes/productRoutes';
 
 // Load environment variables
 dotenv.config();
@@ -45,7 +46,7 @@ app.get("/api/health", (_req: Request, res: Response) => {
 
 // routes
 app.use("/api/auth", authRoutes);
-// app.use("/api/products", productRoutes);
+app.use("/api/products", productRoutes);
 // app.use("/api/cart", cartRoutes);
 // app.use("/api/orders", orderRoutes);
 

@@ -159,7 +159,7 @@ export const createProduct = async (
 // @route   GET /api/products/categories
 // @access  Public
 export const getCategories = async (
-  req: Request,
+  _req: Request,
   res: Response
 ): Promise<void> => {
   try {
