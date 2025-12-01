@@ -406,7 +406,7 @@
 			"name": "Order",
 			"item": [
 				{
-					"name": "New request",
+					"name": "finalize order",
 					"id": "86d3df67-602a-4e10-bec4-dc3c57541606",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -414,11 +414,23 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": {}
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmRiMWUyZWU2YmE5MjMyYTk3ZDEwZiIsImlhdCI6MTc2NDYwMjM2NSwiZXhwIjoxNzY1MjA3MTY1fQ.9y1FNF1XDgooQXTfrfYlc_Nfm2FqMRCtP7FyHJtTeA0"
+							}
 						},
 						"method": "POST",
 						"header": [],
 						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "New request",
+					"id": "ad85ada7-2efa-49f1-b46a-e043e36d5ec2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				}
