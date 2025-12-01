@@ -446,10 +446,19 @@
 				{
 					"name": "get specific order",
 					"id": "47946a42-b69f-4c60-94ee-7eba3a56bb9f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmRiMWUyZWU2YmE5MjMyYTk3ZDEwZiIsImlhdCI6MTc2NDYwMjM2NSwiZXhwIjoxNzY1MjA3MTY1fQ.9y1FNF1XDgooQXTfrfYlc_Nfm2FqMRCtP7FyHJtTeA0"
+							}
+						},
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/orders/692db250ee6ba9232a97d120"
 					},
 					"response": []
 				}
