@@ -320,6 +320,28 @@
 			"name": "Cart",
 			"item": [
 				{
+					"name": "add to cart",
+					"id": "48146fea-a894-498b-b0bb-82d5292c74ce",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"692ab3101c0d00aee3fc84e7\",\r\n  \"size\": \"M\",\r\n  \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart/"
+					},
+					"response": []
+				},
+				{
 					"name": "get cart",
 					"id": "240750ab-1195-4958-840a-70f2d9eb7af9",
 					"protocolProfileBehavior": {
