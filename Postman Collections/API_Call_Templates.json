@@ -315,6 +315,25 @@
 				}
 			],
 			"id": "3384d98e-42d1-4067-b88a-7dac2d296ca9"
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "get cart",
+					"id": "240750ab-1195-4958-840a-70f2d9eb7af9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart"
+					},
+					"response": []
+				}
+			],
+			"id": "6859b23e-e9f9-4d26-9b0d-8e6e5ad4c58c"
 		}
 	]
 }
