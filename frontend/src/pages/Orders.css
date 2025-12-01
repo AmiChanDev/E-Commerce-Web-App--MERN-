@@ -1,0 +1,165 @@
+.orders-page {
+  min-height: calc(100vh - 70px);
+  padding: 40px 0;
+}
+
+.orders-page h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.empty-orders {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-orders p {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.order-id,
+.order-date {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-id .label,
+.order-date .label {
+  font-size: 13px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.order-id .value,
+.order-date .value {
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.order-status {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-processing {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-shipped {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.order-items {
+  margin-bottom: 20px;
+}
+
+.order-item-preview {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.item-qty {
+  font-weight: 600;
+  color: #333;
+}
+
+.more-items {
+  color: #667eea;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.order-total {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-total .label {
+  font-size: 16px;
+  color: #666;
+}
+
+.order-total .value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+@media (max-width: 768px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .order-footer .btn {
+    width: 100%;
+  }
+}
