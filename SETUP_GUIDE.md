@@ -337,21 +337,6 @@ npm run lint     # Run ESLint
 - Includes order summary and items
 - Configurable SMTP settings
 
-## 📖 Next Steps
-
-Want to enhance the application? Consider adding:
-
-- [ ] Payment gateway integration (Stripe/PayPal)
-- [ ] Product reviews and ratings
-- [ ] Wishlist functionality
-- [ ] Admin dashboard
-- [ ] Product image uploads
-- [ ] Advanced order tracking
-- [ ] Password reset functionality
-- [ ] Social login (Google, Facebook)
-- [ ] Real-time notifications
-- [ ] Inventory management
-
 ## 🙏 Acknowledgments
 
 Built with the MERN stack following modern best practices and TypeScript conventions.
