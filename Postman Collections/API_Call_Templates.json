@@ -353,6 +353,51 @@
 						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart"
 					},
 					"response": []
+				},
+				{
+					"name": "update quantity",
+					"id": "1f2f9ee8-a6a3-4974-9473-58376fb945ba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart/0"
+					},
+					"response": []
+				},
+				{
+					"name": "remove item from cart",
+					"id": "7c649a6b-3f49-45e8-a4de-3f4f221893dc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart/0"
+					},
+					"response": []
+				},
+				{
+					"name": "New request",
+					"id": "4534183b-30f5-4014-9978-349ca6524ded",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
 				}
 			],
 			"id": "6859b23e-e9f9-4d26-9b0d-8e6e5ad4c58c"
