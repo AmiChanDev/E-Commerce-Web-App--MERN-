@@ -406,6 +406,25 @@
 			"name": "Order",
 			"item": [
 				{
+					"name": "get user orders",
+					"id": "ad85ada7-2efa-49f1-b46a-e043e36d5ec2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmRiMWUyZWU2YmE5MjMyYTk3ZDEwZiIsImlhdCI6MTc2NDYwMjM2NSwiZXhwIjoxNzY1MjA3MTY1fQ.9y1FNF1XDgooQXTfrfYlc_Nfm2FqMRCtP7FyHJtTeA0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/orders"
+					},
+					"response": []
+				},
+				{
 					"name": "finalize order",
 					"id": "86d3df67-602a-4e10-bec4-dc3c57541606",
 					"protocolProfileBehavior": {
@@ -425,8 +444,8 @@
 					"response": []
 				},
 				{
-					"name": "New request",
-					"id": "ad85ada7-2efa-49f1-b46a-e043e36d5ec2",
+					"name": "get specific order",
+					"id": "47946a42-b69f-4c60-94ee-7eba3a56bb9f",
 					"request": {
 						"method": "GET",
 						"header": [],
