@@ -19,7 +19,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"Jsohn Doe\",\r\n  \"email\": \"jsohn@example.com\",\r\n  \"password\": \"passsword123\"\r\n}",
+							"raw": "{\r\n  \"name\": \"Amantha Gamage\",\r\n  \"email\": \"gamageamantha@gmail.com\",\r\n  \"password\": \"passsword123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -41,7 +41,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"raw": "{\r\n  \"email\": \"gamageamantha@gmail.com\",\r\n  \"password\": \"passsword123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -315,6 +315,146 @@
 				}
 			],
 			"id": "3384d98e-42d1-4067-b88a-7dac2d296ca9"
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "add to cart",
+					"id": "48146fea-a894-498b-b0bb-82d5292c74ce",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"692ab3101c0d00aee3fc84e7\",\r\n  \"size\": \"M\",\r\n  \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart/"
+					},
+					"response": []
+				},
+				{
+					"name": "get cart",
+					"id": "240750ab-1195-4958-840a-70f2d9eb7af9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart"
+					},
+					"response": []
+				},
+				{
+					"name": "update quantity",
+					"id": "1f2f9ee8-a6a3-4974-9473-58376fb945ba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart/0"
+					},
+					"response": []
+				},
+				{
+					"name": "remove item from cart",
+					"id": "7c649a6b-3f49-45e8-a4de-3f4f221893dc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/cart/0"
+					},
+					"response": []
+				},
+				{
+					"name": "clear cart",
+					"id": "4534183b-30f5-4014-9978-349ca6524ded",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				}
+			],
+			"id": "6859b23e-e9f9-4d26-9b0d-8e6e5ad4c58c"
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "get user orders",
+					"id": "ad85ada7-2efa-49f1-b46a-e043e36d5ec2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmRiMWUyZWU2YmE5MjMyYTk3ZDEwZiIsImlhdCI6MTc2NDYwMjM2NSwiZXhwIjoxNzY1MjA3MTY1fQ.9y1FNF1XDgooQXTfrfYlc_Nfm2FqMRCtP7FyHJtTeA0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "finalize order",
+					"id": "86d3df67-602a-4e10-bec4-dc3c57541606",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmRiMWUyZWU2YmE5MjMyYTk3ZDEwZiIsImlhdCI6MTc2NDYwMjM2NSwiZXhwIjoxNzY1MjA3MTY1fQ.9y1FNF1XDgooQXTfrfYlc_Nfm2FqMRCtP7FyHJtTeA0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{SERVER_URL}}:{{SERVER_PORT}}/api/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "get specific order",
+					"id": "47946a42-b69f-4c60-94ee-7eba3a56bb9f",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				}
+			],
+			"id": "c3dd738c-3fa7-431a-a31a-01b0616a669d"
 		}
 	]
 }
